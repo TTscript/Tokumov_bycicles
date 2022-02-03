@@ -1,0 +1,163 @@
+.types {
+  background-color: $types-background-color;
+  min-height: 1038px;
+  margin: 0;
+  padding-top: 149px;
+}
+
+.types__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.types__title {
+  @include semibold-fonts();
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $types-title-color;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    font-size: 24px;
+    line-height: 41px;
+    margin-bottom: 30px;
+  }
+}
+
+.types__img-block {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 40px;
+}
+
+.types__road-bike-wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+
+  @media (max-width: $max-tablet) {
+    padding: 0;
+  }
+}
+
+.types__road-bike-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 224px;
+  left: -66px;
+  width: 180px;
+  height: 180px;
+  border: 27px solid $turquoise-color;
+  border-radius: 50%;
+  color: $turquoise-color;
+  z-index: -1;
+
+  @media (max-width: $max-tablet) {
+    width: 127px;
+    height: 127px;
+    border: 18px solid $turquoise-color;
+    top: 210px;
+    left: -35px;
+  }
+}
+
+.types__mountain-bike-wrapper {
+  position: relative;
+  padding-top: 90px;
+
+  @media (max-width: $max-tablet) {
+    padding: 0;
+  }
+}
+
+.types__mountain-bike-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: -17px;
+  width: 47px;
+  height: 47px;
+  border: 8px solid $turquoise-color;
+
+  @media (max-width: $max-tablet) {
+    display: none;
+  }
+}
+
+.types__mountain-bike-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  right: -17px;
+  width: 47px;
+  height: 47px;
+  border: 8px solid $turquoise-color;
+
+  @media (max-width: $max-tablet) {
+    display: none;
+  }
+}
+
+.types__child-bike-wrapper {
+  position: relative;
+  padding-top: 51px;
+
+  @media (max-width: $max-tablet) {
+    padding: 0;
+  }
+}
+
+.types__child-bike-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: -31px;
+  width: 95px;
+  height: 95px;
+  border: 17px solid $turquoise-color;
+  border-radius: 50%;
+
+  @media (max-width: $max-tablet) {
+    border: 13px solid $turquoise-color;
+    width: 68px;
+    height: 68px;
+    top: -24px;
+    right: -31px;
+  }
+}
+
+.types__road-bike {
+  @media (max-width: $max-tablet) {
+    width: 270px;
+    height: 300px;
+  }
+}
+
+.types__mountain-bike {
+  @media (max-width: $max-tablet) {
+    width: 270px;
+    height: 300px;
+  }
+}
+
+.types__child-bike {
+  @media (max-width: $max-tablet) {
+    width: 270px;
+    height: 300px;
+  }
+}
+
+.types__img-cards-name {
+  @include semibold-fonts();
+  font-size: 22px;
+  line-height: 42px;
+  text-align: center;
+  color: $types-text-color;
+}
