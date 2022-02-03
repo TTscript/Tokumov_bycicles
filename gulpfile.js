@@ -1,5 +1,5 @@
 const { src, dest, watch, series, parallel} = require('gulp');
-const htmlmin = require('gulp-htmlmin');
+// const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemap = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
@@ -10,15 +10,15 @@ const csso = require('gulp-csso');
 const minifyjs = require('gulp-minify');
 
 function html() {
-    return src('src/**.html')
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
+    return src('source/**.html')
+        // .pipe(htmlmin({
+        //     collapseWhitespace: true
+        // }))
         .pipe(dest('build'))
 }
 
 function style() {
-    return src('src/sass/style.scss')
+    return src('source/sass/style.scss')
         .pipe(sourcemap.init())
         .pipe(sass())
         .pipe(autoprefixer({
@@ -43,37 +43,37 @@ function server() {
         ui: false,
     })
 
-    watch('src/**.html', series(html)).on('change', sync.reload);
-    watch('src/sass/**/*.scss', series(style)).on('change', sync.reload);
-    watch('src/js/**/*.js', series(js)).on('change', sync.reload);
+    watch('source/**.html', series(html)).on('change', sync.reload);
+    watch('source/sass/**/*.scss', series(style)).on('change', sync.reload);
+    watch('source/js/**/*.js', series(js)).on('change', sync.reload);
 }
 
 const copy = (done) => {
   src([
-    'src/fonts/*.{woff2,woff}',
-    'src/*.ico',
-    'src/img/**/*.{png,jpg,svg}',
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/img/**/*.{png,jpg,svg}',
   ],
   {
-    base: 'src'
+    base: 'source'
   })
     .pipe(dest('build'))
     done();
 }
 
 function copyFonts() {
-    return src('src/fonts/*.{woff2,woff}')
+    return src('source/fonts/*.{woff2,woff}')
       .pipe(dest('build/fonts'));
 }
 
 function js() {
-  return src('src/js/**/*.js')
+  return src('source/js/**/*.js')
     .pipe(minifyjs())
     .pipe(dest('build/js'));
 }
 
 function devcss() {
-  return src('src/sass/style.scss')
+  return src('source/sass/style.scss')
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(autoprefixer({
@@ -82,7 +82,7 @@ function devcss() {
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
-    .pipe(dest('src/css/'));
+    .pipe(dest('source/css/'));
 }
 
 exports.devcss = devcss;

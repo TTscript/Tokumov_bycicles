@@ -1,0 +1,54 @@
+.shape__inner {
+  display: flex;
+  flex-direction: column;
+  border: none;
+
+  @media (max-width: $max-tablet) {
+    display: none;
+  }
+}
+
+.shape__title {
+  @include semibold-fonts();
+  letter-spacing: -0.005em;
+  max-width: 327px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.shape__enter-name {
+  min-width: 327px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid $input-border-color;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 30px;
+}
+
+.shape__enter-phone {
+  min-width: 327px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid $input-border-color;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 30px;
+}
+
+.shape__submit {
+  @include semibold-fonts();
+  color: $button-text-color;
+  font-size: 15px;
+  line-height: 21px;
+  min-width: 327px;
+  height: 48px;
+  background-color: $turquoise-color;
+  border-radius: 6px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shape__error {
+  border: 3px solid $input-error-color;
+}

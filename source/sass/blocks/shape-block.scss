@@ -1,0 +1,40 @@
+.shape-block {
+  margin: 0;
+  padding: 0;
+}
+
+.shape-block__general-block {
+  background-image: url("../img/desktop/mainback.png");
+  background-size: cover;
+  min-height: 825px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $max-tablet) {
+    min-height: 340px;
+    background-image: url("../img/tablet/mainback.png");
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $max-mobile) {
+    min-height: 340px;
+    background-image: url("../img/mobile/mainback.png");
+  }
+}
+
+.shape-block__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 875px;
+
+  @media (max-width: $max-tablet) {
+    justify-content: center;
+    min-width: unset;
+  }
+}
+
+ .shape-block__inner-bottom {
+   display: flex;
+   justify-content: center;
+ }

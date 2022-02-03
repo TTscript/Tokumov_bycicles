@@ -1,0 +1,34 @@
+.main-navigation {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $light-font-color;
+  min-width: 875px;
+
+  @media (max-width: $max-tablet) {
+    display: none;
+  }
+}
+
+.main-navigation__list {
+  @include light-fonts();
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  color: $light-font-color;
+  letter-spacing: -0.005em;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.main-navigation__list-item {
+  margin: 0 135px 0 0;
+  padding: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-navigation__list-link {
+  color: $light-font-color;
+}

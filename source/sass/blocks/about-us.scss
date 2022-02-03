@@ -1,0 +1,44 @@
+.about-us {
+  max-width: 393px;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.about-us__logo {
+  @media (max-width: $max-tablet) {
+    display: none;
+  }
+}
+
+.about-us__title {
+  @include bold-fonts();
+  margin: 0 0 32px 0;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    text-align: center;
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.about-us__text {
+  @include light-fonts();
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    max-width: 435px;
+    text-align: center;
+    font-size: 18px;
+  }
+}

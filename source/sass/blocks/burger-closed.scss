@@ -1,0 +1,79 @@
+.burger-closed {
+  display: none;
+  cursor: pointer;
+  transition: 1s all;
+
+  @media (max-width: $max-tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: $turquoise-color;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: $max-mobile) {
+    min-width: 50px;
+    min-height: 50px;
+  }
+}
+
+.burger-closed__inner {
+  overflow: hidden;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.burger-closed__top-line {
+  border: 1px solid $burger-menu-line-color;
+  width: 23px;
+  padding: 0;
+  margin: 0 0 5px 0;
+  transition: 1s;
+}
+
+.burger-closed__middle-line {
+  border: 1px solid $burger-menu-line-color;
+  width: 23px;
+  padding: 0;
+  margin: 0 0 5px 0;
+  transition: 1s;
+}
+
+.burger-closed__bottom-line {
+  transition: 1s;
+}
+
+.burger-closed__line {
+  border: 1px solid $burger-menu-line-color;
+  width: 23px;
+}
+
+.burger-closed__line--active {
+  transform: translate(200%);
+  transition: 1s;
+  margin: 0;
+  padding: 0;
+}
+
+.burger-closed__top-line--transform {
+  border: 1px solid $burger-menu-line-color;
+  width: 23px;
+  transform: rotate(135deg);
+  position: relative;
+  top: 9px;
+  left: 0;
+  transition: 1s;
+}
+
+.burger-closed__bottom-line--transform {
+  border: 1px solid $burger-menu-line-color;
+  width: 23px;
+  transform: rotate(-135deg);
+  position: relative;
+  top: 2px;
+  right: 0;
+  transition: 1s;
+}
