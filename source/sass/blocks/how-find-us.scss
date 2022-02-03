@@ -1,0 +1,119 @@
+.how-find-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.how-find-us__address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 16px;
+}
+
+.how-find-us__title {
+  @include semibold-fonts();
+  font-size: 30px;
+  line-height: 30px;
+  color: $how-find-us-title;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+.how-find-us__text {
+  @include regular-fonts();
+  text-align: center;
+  font-size: 17px;
+  line-height: 31px;
+  color: $how-find-us-text;
+  margin: 0 0 42px 0;
+  padding: 0;
+}
+
+.how-find-us__map {
+  background: url("../img/desktop/map.jpg");
+  min-width: 957px;
+  min-height: 530px;
+  margin: 0 0 39px 0;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    background: url("../img/tablet/map.jpg");
+    min-width: 698px;
+    min-height: 545px;
+  }
+
+  @media (max-width: $max-mobile) {
+    background: url("../img/mobile/map.jpg");
+    min-width: 320px;
+    min-height: 250px;
+  }
+}
+
+.how-find-us__contacts-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+
+  @media (max-width: $max-mobile) {
+    flex-direction: column;
+  }
+}
+
+.how-find-us__email {
+  position: relative;
+}
+
+.how-find-us__email::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: -31px;
+  background: url("../img/email.svg") no-repeat;
+  background-size: 20px;
+  width: 26px;
+  height: 20px;
+}
+
+.how-find-us__email a {
+  @include regular-fonts();
+  font-size: 16px;
+  line-height: 22px;
+  color: $how-find-us-contacts;
+  margin: 0 127px 0 0;
+  padding: 0;
+
+  @media (max-width: $max-mobile) {
+    margin: 0;
+  }
+}
+
+.how-find-us__phone {
+  position: relative;
+}
+
+.how-find-us__phone::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -31px;
+  background: url("../img/phone.svg") no-repeat;
+  background-size: 20px;
+  width: 22px;
+  height: 23px;
+}
+
+.how-find-us__phone a {
+  @include regular-fonts();
+  font-size: 16px;
+  line-height: 22px;
+  color: $how-find-us-contacts;
+  margin: 0;
+  padding: 0;
+}
