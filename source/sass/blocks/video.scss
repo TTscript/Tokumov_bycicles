@@ -1,0 +1,121 @@
+.video {
+  background: linear-gradient(to top,transparent 12%,$video-background-color 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 150px;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    background: linear-gradient(to top,transparent 17%,$video-background-color 12%);
+    margin-bottom: 69px;
+  }
+
+  @media (max-width: $max-mobile) {
+    background: linear-gradient(to top,transparent 11%,#131314 11%);
+  }
+}
+
+.video__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 56px 0;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: $max-mobile) {
+    margin-bottom: 53px;
+    padding: 0 16px;
+  }
+}
+
+.video__title {
+  @include semibold-fonts();
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  margin: 0 0 20px 0;
+  padding: 120px 0 0 0;
+
+  @media (max-width: $max-tablet) {
+    font-size: 24px;
+    padding-top: 71px;
+  }
+
+  @media (max-width: $max-mobile) {
+    padding-top: 84px;
+  }
+}
+
+.video__text {
+  @include light-fonts();
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  max-width: 340px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $max-tablet) {
+    max-width: 429px;
+  }
+}
+
+.video__cinema-block {
+  background: url("../img/desktop/video.png");
+  min-width: 929px;
+  min-height: 522px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $max-tablet) {
+    min-width: 503px;
+    min-height: 282px;
+    background: url("../img/tablet/video.png") no-repeat;
+  }
+
+  @media (max-width: $max-mobile) {
+    min-width: 288px;
+    min-height: 162px;
+    background: url("../img/mobile/video.png");
+  }
+}
+
+.video__button {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  background-color: $turquoise-color;
+
+  @media (max-width: $max-tablet) and (min-width: $min-tablet) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.video__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/desktop/video-arrow.svg") no-repeat;
+  width: 13px;
+  height: 18px;
+
+  @media (max-width: $max-tablet) and (min-width: $min-tablet) {
+    background: url("../img/tablet/video-arrow.svg") no-repeat;
+    width: 18px;
+    height: 25px;
+  }
+}

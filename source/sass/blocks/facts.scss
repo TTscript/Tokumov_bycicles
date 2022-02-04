@@ -1,6 +1,10 @@
 .facts {
-  margin: 0 0 158px;
+  margin: 0;
   padding: 0;
+
+  @media (max-width: $max-mobile) {
+    margin-bottom: 85px;
+  }
 }
 
 .facts__inner {
@@ -23,6 +27,11 @@
   @media (max-width: $max-tablet) {
     font-size: 24px;
     line-height: 41px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $max-mobile) {
+    margin-bottom: 32px;
   }
 }
 
@@ -30,7 +39,7 @@
   @include regular-fonts();
   font-size: 22px;
   line-height: 34px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.5px;
   color: $facts-list-item-color;
   list-style: none;
   display: flex;
@@ -44,12 +53,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    column-gap: 30px;
     row-gap: 40px;
   }
 
   @media (max-width: $max-mobile) {
     font-size: 18px;
     line-height: 34px;
+    row-gap: 35px;
   }
 }
 
@@ -58,6 +69,10 @@
   text-align: center;
   margin: 0 35px 0 0;
   padding: 0;
+
+  &:last-child {
+    margin: 0;
+  }
 
   @media (max-width: $max-tablet) {
     margin: 0;
@@ -77,6 +92,6 @@
     letter-spacing: -1.27273px;
     color: $facts-list-counter-color;
     display: block;
-    margin: 0 0 22px 0;
+    margin: 0 0 15px 0;
     padding: 0;
 }

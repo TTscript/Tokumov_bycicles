@@ -1,6 +1,10 @@
 .shape-block {
   margin: 0 0 150px 0;
   padding: 0;
+
+  @media (max-width: $max-tablet) {
+    margin-bottom: 72px;
+  }
 }
 
 .shape-block__general-block {
@@ -9,6 +13,8 @@
   min-height: 825px;
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 
   @media (max-width: $max-tablet) {
     min-height: 340px;
@@ -17,7 +23,7 @@
   }
 
   @media (max-width: $max-mobile) {
-    min-height: 340px;
+    min-height: 393px;
     background-image: url("../img/mobile/mainback.png");
   }
 }
@@ -37,4 +43,8 @@
  .shape-block__inner-bottom {
    display: flex;
    justify-content: center;
+
+   @media (max-width: $max-mobile) {
+     padding: 0 20px;
+   }
  }

@@ -1,7 +1,14 @@
+.shape {
+  margin: 0;
+  padding: 83px 0 0 0;
+}
+
 .shape__inner {
   display: flex;
   flex-direction: column;
   border: none;
+  margin: 0;
+  padding: 0;
 
   @media (max-width: $max-tablet) {
     display: none;

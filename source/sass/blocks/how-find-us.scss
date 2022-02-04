@@ -14,6 +14,10 @@
   align-items: center;
   margin: 0;
   padding: 0 16px;
+
+  @media (max-width: $max-mobile) {
+    padding: 0 28px;
+  }
 }
 
 .how-find-us__title {
@@ -23,6 +27,15 @@
   color: $how-find-us-title;
   margin: 0 0 30px 0;
   padding: 0;
+
+  @media (max-width: $max-tablet) {
+    font-size: 24px;
+    margin-bottom: 19px;
+  }
+
+  @media (max-width: $max-mobile) {
+    font-size: 18px;
+  }
 }
 
 .how-find-us__text {
@@ -31,27 +44,39 @@
   font-size: 17px;
   line-height: 31px;
   color: $how-find-us-text;
+  max-width: 555px;
   margin: 0 0 42px 0;
   padding: 0;
+
+  @media (max-width: $max-tablet) {
+    max-width: unset;
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: $max-mobile) {
+    font-size: 17px;
+  }
 }
 
 .how-find-us__map {
   background: url("../img/desktop/map.jpg");
   min-width: 957px;
   min-height: 530px;
-  margin: 0 0 39px 0;
+  margin: 0 0 32px 0;
   padding: 0;
 
   @media (max-width: $max-tablet) {
     background: url("../img/tablet/map.jpg");
     min-width: 698px;
     min-height: 545px;
+    margin-bottom: 15px;
   }
 
   @media (max-width: $max-mobile) {
     background: url("../img/mobile/map.jpg");
     min-width: 320px;
     min-height: 250px;
+    margin-bottom: 24px;
   }
 }
 
@@ -60,25 +85,38 @@
   justify-content: center;
   align-items: center;
   min-width: 100%;
+  column-gap: 106px;
 
   @media (max-width: $max-mobile) {
     flex-direction: column;
+    display: block;
   }
 }
 
 .how-find-us__email {
   position: relative;
+  margin: 0;
+
+  @media (max-width: $max-mobile) {
+    left: 24px;
+    text-align: center;
+    margin-bottom: 14px;
+  }
 }
 
 .how-find-us__email::before {
   content: '';
   position: absolute;
   top: 9px;
-  left: -31px;
+  left: -42px;
   background: url("../img/email.svg") no-repeat;
-  background-size: 20px;
+  background-size: 26px 20px;
   width: 26px;
   height: 20px;
+
+  @media (max-width: $max-mobile) {
+    left: 6px;
+  }
 }
 
 .how-find-us__email a {
@@ -86,7 +124,7 @@
   font-size: 16px;
   line-height: 22px;
   color: $how-find-us-contacts;
-  margin: 0 127px 0 0;
+  margin: 0;
   padding: 0;
 
   @media (max-width: $max-mobile) {
@@ -96,17 +134,27 @@
 
 .how-find-us__phone {
   position: relative;
+  left: 24px;
+
+  @media (max-width: $max-mobile) {
+    text-align: center;
+    left: 12px;
+  }
 }
 
 .how-find-us__phone::before {
   content: '';
   position: absolute;
-  top: 2px;
-  left: -31px;
+  top: 5px;
+  left: -38px;
   background: url("../img/phone.svg") no-repeat;
   background-size: 20px;
   width: 22px;
   height: 23px;
+
+  @media (max-width: $max-mobile) {
+    left: 48px;
+  }
 }
 
 .how-find-us__phone a {
