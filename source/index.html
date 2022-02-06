@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- 16x16 -->
+  <link rel="icon" href="img/icons/32.svg" type="image/svg+xml"> <!-- 32x32 -->
+  <link rel="apple-touch-icon" href="img/icons/180.png"> <!-- 180x180 -->
+  <!-- <link rel="manifest" href="manifest.webmanifest.json"> 192x192 512x512 -->
   <link rel="preload" href="fonts/open-sans-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-semi-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -16,10 +20,10 @@
     <header class="page-header page-header--background-color">
       <nav class="main-navigation">
         <ul class="main-navigation__list">
-          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#">О нас</a></li>
-          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#">Виды велосипедов</a></li>
-          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#">Видео про велосипеды</a></li>
-          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#">Контакты</a></li>
+          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#facts">О нас</a></li>
+          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#types">Виды велосипедов</a></li>
+          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#video">Видео про велосипеды</a></li>
+          <li class="main-navigation__list-item"><a class="main-navigation__list-link" href="#how-find-us">Контакты</a></li>
         </ul>
       </nav>
       <div class="page-header__tablet">
@@ -69,7 +73,7 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Moon. Магазин по продаже велосипедов.</h1>
-      <section class="shape-block">
+      <section class="shape-block" id="shape-block">
         <div class="shape-block__general-block">
           <div class="shape-block__inner">
             <div class="about-us">
@@ -104,7 +108,7 @@
           </form>
         </div>
       </section>
-      <section class="facts">
+      <section class="facts" id="facts">
         <div class="facts__inner">
           <h2 class="facts__title">Несколько фактов о нас</h2>
           <ol class="facts__list">
@@ -115,7 +119,7 @@
           </ol>
         </div>
       </section>
-      <section class="types">
+      <section class="types" id="types">
         <div class="types__inner">
           <h2 class="types__title">Виды велосипедов</h2>
           <div class="types__img-block">
@@ -141,7 +145,7 @@
           </div>
         </div>
       </section>
-      <section class="video">
+      <section class="video" id="video">
         <div class="video__inner">
           <h2 class="video__title">Видео про велосипеды</h2>
           <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
@@ -152,13 +156,12 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="how-find-us">
+      <div class="how-find-us" id="how-find-us">
         <div class="how-find-us__address">
           <h2 class="how-find-us__title">Как нас найти?</h2>
           <p class="how-find-us__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         </div>
         <div class="how-find-us__map">
-
         </div>
         <div class="how-find-us__contacts-wrapper">
           <div class="how-find-us__email"><a href="#">puteshestviemechta@gmail.ru</a></div>

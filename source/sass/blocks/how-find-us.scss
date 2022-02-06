@@ -4,7 +4,15 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 0 50px;
+
+  @media (max-width: $max-tablet) {
+    padding: 0 35px;
+  }
+
+  @media (max-width: $max-mobile) {
+    padding: 0;
+  }
 }
 
 .how-find-us__address {
@@ -59,22 +67,20 @@
 }
 
 .how-find-us__map {
-  background: url("../img/desktop/map.jpg");
-  min-width: 957px;
+  background: url("../img/desktop/map.jpg") center/contain no-repeat;
+  min-width: 100%;
   min-height: 530px;
   margin: 0 0 32px 0;
   padding: 0;
 
   @media (max-width: $max-tablet) {
-    background: url("../img/tablet/map.jpg");
-    min-width: 698px;
+    background: url("../img/tablet/map.jpg") center/cover no-repeat;
     min-height: 545px;
     margin-bottom: 15px;
   }
 
-  @media (max-width: $max-mobile) {
-    background: url("../img/mobile/map.jpg");
-    min-width: 320px;
+  @media (min-width: $min-mobile) and (max-width: $max-mobile) {
+    background: url("../img/mobile/map.jpg") center/cover no-repeat;
     min-height: 250px;
     margin-bottom: 24px;
   }
@@ -82,14 +88,17 @@
 
 .how-find-us__contacts-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  column-gap: 106px;
+  transform: translateX(-19px);
+  column-gap: 93px;
 
   @media (max-width: $max-mobile) {
-    flex-direction: column;
-    display: block;
+    justify-content: center;
+    min-width: 73%;
+    column-gap: 20px;
+    row-gap: 13px;
+    transform: translateX(-7px);
   }
 }
 
@@ -98,24 +107,26 @@
   margin: 0;
 
   @media (max-width: $max-mobile) {
-    left: 24px;
-    text-align: center;
-    margin-bottom: 14px;
+    // left: 24px;
+    // text-align: center;
+    // margin-bottom: 14px;
   }
 }
 
 .how-find-us__email::before {
   content: '';
-  position: absolute;
-  top: 9px;
-  left: -42px;
+  display: inline-block;
   background: url("../img/email.svg") no-repeat;
   background-size: 26px 20px;
   width: 26px;
   height: 20px;
+  transform: translateX(20px);
+  margin-right: 35px;
+  position: relative;
+  top: 5px;
 
   @media (max-width: $max-mobile) {
-    left: 6px;
+    // left: 6px;
   }
 }
 
@@ -134,26 +145,26 @@
 
 .how-find-us__phone {
   position: relative;
-  left: 24px;
 
   @media (max-width: $max-mobile) {
-    text-align: center;
-    left: 12px;
+    // text-align: center;
+    // left: 12px;
   }
 }
 
 .how-find-us__phone::before {
   content: '';
-  position: absolute;
-  top: 5px;
-  left: -38px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
   background: url("../img/phone.svg") no-repeat;
   background-size: 20px;
   width: 22px;
   height: 23px;
+  margin-right: 14px;
 
   @media (max-width: $max-mobile) {
-    left: 48px;
+    // left: 48px;
   }
 }
 

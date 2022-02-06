@@ -1,8 +1,8 @@
 .types {
   background-color: $types-background-color;
-  min-height: 1192px;
+  min-height: 1039px;
   margin: 0;
-  padding: 302px 50px 0 50px;
+  padding: 150px 50px 0 50px;
 
   @media (max-width: $max-tablet) {
     min-height: 1021px;
@@ -190,6 +190,11 @@
   line-height: 42px;
   text-align: center;
   color: $types-text-color;
+  max-width: 342px;
   margin: 0;
   padding: 0;
+
+  @media (max-width: $max-tablet) {
+    max-width: 270px;
+  }
 }

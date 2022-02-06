@@ -15,6 +15,7 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+  padding: 0 50px 20px 50px;
 
   @media (max-width: $max-tablet) {
     min-height: 340px;
@@ -25,6 +26,7 @@
   @media (max-width: $max-mobile) {
     min-height: 393px;
     background-image: url("../img/mobile/mainback.png");
+    padding: 0 20px 20px 20px;
   }
 }
 

@@ -12,6 +12,7 @@
 .main-navigation__list {
   @include light-fonts();
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   color: $light-font-color;
