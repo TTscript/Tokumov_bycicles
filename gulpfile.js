@@ -1,3 +1,5 @@
+// import imagemin from 'gulp-imagemin';
+
 const { src, dest, watch, series, parallel} = require('gulp');
 // const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass')(require('sass'));
@@ -8,12 +10,16 @@ const sync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const minifyjs = require('gulp-minify');
+const webp = require('gulp-webp');
+const imagemin = require('gulp-imagemin');
+
+
 
 function html() {
     return src('source/**.html')
         // .pipe(htmlmin({
         //     collapseWhitespace: true
-        // }))
+        // })/
         .pipe(dest('build'))
 }
 
@@ -61,6 +67,22 @@ const copy = (done) => {
     done();
 }
 
+const optimizeImages = () => {
+  return src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ]))
+    .pipe(dest("build/img"))
+}
+
+const createWebp = () => {
+  return src("source/img/**/*.{jpg,png}")
+    .pipe(webp({quality: 90}))
+    .pipe(dest("build/img"))
+}
+
 function copyFonts() {
     return src('source/fonts/*.{woff2,woff}')
       .pipe(dest('build/fonts'));
@@ -68,7 +90,6 @@ function copyFonts() {
 
 function js() {
   return src('source/js/**/*.js')
-    .pipe(minifyjs())
     .pipe(dest('build/js'));
 }
 
@@ -87,5 +108,5 @@ function devcss() {
 
 exports.devcss = devcss;
 exports.clear = clear;
-exports.build = series(clear, copy, html, style, js);
-exports.default = series(clear, copy, html, style, js, server);
+exports.build = series(clear, copy,  optimizeImages, html, style, js, createWebp);
+exports.default = series(clear, copy, html, style, js, createWebp, server);

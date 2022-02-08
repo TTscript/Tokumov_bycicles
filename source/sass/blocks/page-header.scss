@@ -43,6 +43,7 @@
   margin: 0 0 30px 0;
   padding: 0;
   max-height: 60px;
+
   &:last-child {
     margin: 0;
   }
@@ -50,4 +51,17 @@
 
 .page-header__navigation-item--disappear {
   display: none;
+}
+
+.page-header__navigation-item p {
+  margin: 0;
+  padding: 15px;
+  position: relative;
+}
+
+.page-header__navigation-item a {
+  @include semibold-fonts();
+  font-size: 20px;
+  line-height: 28px;
+  color: $burger-menu-line-color;
 }

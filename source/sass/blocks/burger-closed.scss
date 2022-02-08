@@ -1,10 +1,12 @@
+
 .burger-closed {
   display: none;
   cursor: pointer;
   transition: 1s all;
+  z-index: 1;
 
   @media (max-width: $max-tablet) {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     min-width: 50px;
@@ -18,6 +20,14 @@
     min-width: 50px;
     min-height: 50px;
   }
+}
+
+.burger-closed--change-display {
+  display: flex;
+}
+
+.burger-closed--background-color {
+  background-color: $burger-open-color;
 }
 
 .burger-closed__inner {
@@ -59,7 +69,7 @@
 }
 
 .burger-closed__top-line--transform {
-  border: 1px solid $burger-menu-line-color;
+  border: 1px solid $burger-open-line-color;
   width: 23px;
   transform: rotate(135deg);
   position: relative;
@@ -69,7 +79,7 @@
 }
 
 .burger-closed__bottom-line--transform {
-  border: 1px solid $burger-menu-line-color;
+  border: 1px solid $burger-open-line-color;
   width: 23px;
   transform: rotate(-135deg);
   position: relative;

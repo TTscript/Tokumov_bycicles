@@ -1,5 +1,5 @@
 .video {
-  background: linear-gradient(to top,transparent 12%,$video-background-color 10%);
+  background: linear-gradient(to top, transparent 12%, $video-background-color 10%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +8,12 @@
   padding: 0 30px;
 
   @media (max-width: $max-tablet) {
-    background: linear-gradient(to top,transparent 17%,$video-background-color 12%);
+    background: linear-gradient(to top, transparent 17%, $video-background-color 12%);
     margin-bottom: 69px;
   }
 
   @media (max-width: $max-mobile) {
-    background: linear-gradient(to top,transparent 11%,#131314 11%);
+    background: linear-gradient(to top, transparent 11%, #131314 11%);
     padding: 0 16px;
   }
 }
@@ -35,11 +35,11 @@
   }
 }
 
-.video__title {
+.video__inner h2 {
   @include semibold-fonts();
   font-size: 30px;
   line-height: 30px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   margin: 0 0 20px 0;
   padding: 120px 0 0 0;
 
@@ -54,11 +54,11 @@
   }
 }
 
-.video__text {
+.video__inner p {
   @include light-fonts();
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   max-width: 340px;
   text-align: center;
   margin: 0;
@@ -77,16 +77,17 @@
   justify-content: center;
   align-items: center;
 
-  @media (max-width: $max-tablet) {
-
-    // background: url("../img/tablet/video.png") no-repeat;
+  @media (min-resolution: 2dppx) {
+    background: url("../img/desktop/video@2x.png") center/contain no-repeat;
   }
 
   @media (max-width: $min-tablet) {
-    // min-width: 503px;
     min-height: 282px;
     background: url("../img/tablet/video.png") center/contain no-repeat;
 
+    @media (min-resolution: 2dppx) {
+      background: url("../img/tablet/video@2x.png") center/contain no-repeat;
+    }
   }
 
   @media (max-width: 400px) {
@@ -94,16 +95,30 @@
     padding: 0 16;
     min-height: 162px;
     background: url("../img/mobile/video.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/mobile/video@2x.png") no-repeat;
+      background-size: cover;
+    }
   }
 }
 
-.video__button {
+.video__cinema-block button {
   position: relative;
   width: 65px;
   height: 65px;
   border-radius: 50%;
   border: none;
   background-color: $turquoise-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
+  }
 
   @media (max-width: $max-tablet) and (min-width: $min-tablet) {
     width: 90px;
@@ -111,7 +126,7 @@
   }
 }
 
-.video__button::before {
+.video__cinema-block button::before {
   content: "";
   position: absolute;
   top: 50%;

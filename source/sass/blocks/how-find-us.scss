@@ -28,7 +28,7 @@
   }
 }
 
-.how-find-us__title {
+.how-find-us__address h2 {
   @include semibold-fonts();
   font-size: 30px;
   line-height: 30px;
@@ -46,7 +46,7 @@
   }
 }
 
-.how-find-us__text {
+.how-find-us__address p {
   @include regular-fonts();
   text-align: center;
   font-size: 17px;
@@ -106,27 +106,17 @@
   position: relative;
   margin: 0;
 
-  @media (max-width: $max-mobile) {
-    // left: 24px;
-    // text-align: center;
-    // margin-bottom: 14px;
-  }
-}
-
-.how-find-us__email::before {
-  content: '';
-  display: inline-block;
-  background: url("../img/email.svg") no-repeat;
-  background-size: 26px 20px;
-  width: 26px;
-  height: 20px;
-  transform: translateX(20px);
-  margin-right: 35px;
-  position: relative;
-  top: 5px;
-
-  @media (max-width: $max-mobile) {
-    // left: 6px;
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../img/email.svg") no-repeat;
+    background-size: 26px 20px;
+    width: 26px;
+    height: 20px;
+    transform: translateX(20px);
+    margin-right: 35px;
+    position: relative;
   }
 }
 
@@ -138,6 +128,14 @@
   margin: 0;
   padding: 0;
 
+  &:hover {
+    color: $turquoise-color;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
   @media (max-width: $max-mobile) {
     margin: 0;
   }
@@ -146,25 +144,16 @@
 .how-find-us__phone {
   position: relative;
 
-  @media (max-width: $max-mobile) {
-    // text-align: center;
-    // left: 12px;
-  }
-}
-
-.how-find-us__phone::before {
-  content: '';
-  display: inline-block;
-  position: relative;
-  top: 4px;
-  background: url("../img/phone.svg") no-repeat;
-  background-size: 20px;
-  width: 22px;
-  height: 23px;
-  margin-right: 14px;
-
-  @media (max-width: $max-mobile) {
-    // left: 48px;
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: url("../img/phone.svg") no-repeat;
+    background-size: 20px;
+    width: 22px;
+    height: 23px;
+    margin-right: 14px;
   }
 }
 
@@ -175,4 +164,12 @@
   color: $how-find-us-contacts;
   margin: 0;
   padding: 0;
+
+  &:hover {
+    color: $turquoise-color;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 }

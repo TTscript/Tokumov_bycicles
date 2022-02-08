@@ -3,7 +3,6 @@
   border: none;
 
   @media (max-width: $max-tablet) {
-    display: block;
     display: flex;
     flex-direction: column;
     max-width: 327px;
@@ -12,9 +11,9 @@
   }
 }
 
-.shape-bottom__title {
+.shape-bottom__inner legend {
   @include semibold-fonts();
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: $form-title-color;
   text-align: center;
   margin: 0 0 20px 0;
@@ -30,14 +29,29 @@
     min-width: unset;
     margin-bottom: 18px;
   }
- }
+}
 
 .shape-bottom__enter-name {
+  min-width: 100%;
   height: 48px;
   border-radius: 6px;
   border: 1px solid $input-border-color;
   margin: 0 0 20px 0;
+}
+
+.shape-bottom__enter-name input {
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  margin: 0 0 20px 0;
   padding: 0 0 0 30px;
+  border: 0;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $turquoise-color;
+  }
 
   @media (max-width: $max-tablet) {
     padding-left: 19px;
@@ -46,28 +60,50 @@
 
 .shape-bottom__enter-phone {
   height: 48px;
+  width: 100%;
   border-radius: 6px;
   border: 1px solid $input-border-color;
   margin: 0 0 20px 0;
+}
+
+.shape-bottom__enter-phone input {
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 6px;
   padding: 0 0 0 30px;
+  outline: none;
+  border: none;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $turquoise-color;
+  }
 
   @media (max-width: $max-tablet) {
     padding-left: 19px;
   }
 }
 
-.shape-bottom__submit {
+.shape-bottom__inner button {
   @include semibold-fonts();
   color: $button-text-color;
   font-size: 15px;
   line-height: 21px;
-  // min-width: 327px;
   height: 48px;
   background-color: $turquoise-color;
   border-radius: 6px;
   border: none;
+  cursor: pointer;
   margin: 0;
   padding: 0;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
+  }
 }
 
 .shape-bottom__error {

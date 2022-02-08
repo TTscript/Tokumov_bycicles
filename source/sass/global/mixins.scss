@@ -1,29 +1,29 @@
 @mixin light-fonts() {
-  font-family: "Open Sans Light", "Arial", "sans-serif";
+  font-family: "Open Sans Light", "Arial", sans-serif;
   font-size: 16px;
   line-height: 32px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: $light-font-color;
 }
 
 @mixin regular-fonts() {
-  font-family: "Open Sans Regular", "Arial", "sans-serif";
+  font-family: "Open Sans Regular", "Arial", sans-serif;
   font-size: 22px;
   line-height: 34px;
   color: $regular-font-color;
 }
 
 @mixin semibold-fonts() {
-  font-family: "Open Sans Semibold", "Arial", "sans-serif";
+  font-family: "Open Sans Semibold", "Arial", sans-serif;
   font-size: 17px;
   line-height: 28px;
   color: $semibold-font-color;
 }
 
 @mixin bold-fonts() {
-  font-family: "Open Sans Bold", "Arial", "sans-serif";
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 46px;
   line-height: 64px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: $bold-font-color;
 }

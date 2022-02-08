@@ -21,12 +21,13 @@
 
 .about-us__logo {
   margin-bottom: 20px;
+
   @media (max-width: $max-tablet) {
     display: none;
   }
 }
 
-.about-us__title {
+.about-us h2 {
   @include bold-fonts();
   margin: 0 0 24px 0;
   padding: 0;
@@ -39,7 +40,7 @@
   }
 }
 
-.about-us__text {
+.about-us p {
   @include light-fonts();
   font-size: 20px;
   margin: 0;

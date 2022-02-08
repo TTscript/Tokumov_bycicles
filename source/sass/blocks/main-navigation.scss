@@ -4,6 +4,10 @@
   border-bottom: 1px solid $light-font-color;
   min-width: 875px;
 
+  &:hover {
+    border-bottom: 1px solid $turquoise-color;
+  }
+
   @media (max-width: $max-tablet) {
     display: none;
   }
@@ -16,18 +20,26 @@
   justify-content: center;
   list-style: none;
   color: $light-font-color;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   margin: 0 0 8px 0;
   padding: 0;
 }
 
-.main-navigation__list-item {
+.main-navigation__list li {
   margin: 0 135px 0 0;
   padding: 0;
 
   &:last-child {
     margin-right: 0;
   }
+}
+
+.main-navigation__list-item:hover a {
+  color: $turquoise-color;
+}
+
+.main-navigation__list-item:active a {
+  opacity: 0.4;
 }
 
 .main-navigation__list-link {
