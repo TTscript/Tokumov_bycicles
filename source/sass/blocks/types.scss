@@ -94,6 +94,7 @@
 
 .types__road-bike-wrapper img {
   @media (max-width: $max-tablet) {
+    background-size: 270px 300px;
     width: 270px;
     height: 300px;
   }
@@ -139,6 +140,7 @@
 
 .types__mountain-bike-wrapper img {
   @media (max-width: $max-tablet) {
+    background-size: 270px 300px;
     width: 270px;
     height: 300px;
   }
@@ -179,8 +181,10 @@
 
 .types__child-bike-wrapper img {
   @media (max-width: $max-tablet) {
+    background-size: 270px 300px;
     width: 270px;
     height: 300px;
+    background-position: center;
   }
 }
 
