@@ -118,5 +118,5 @@ function svgsprite() {
 exports.sprite = svgsprite;
 exports.devcss = devcss;
 exports.clear = clear;
-exports.build = series(clear, copy, svgsprite, optimizeImages, html, style, js, createWebp);
-exports.default = series(clear, copy, html, style, js, createWebp, server);
+exports.build = series(clear, copy, optimizeImages, svgsprite, html, style, js, createWebp);
+exports.default = series(clear, copy, html, style, js, createWebp, svgsprite, server);
