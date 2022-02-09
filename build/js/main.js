@@ -64,15 +64,10 @@ function disableScroll() {
 //FORM VALIDATION
 
 const shape = document.querySelector('.shape');
-const shapeBottom = document.querySelector('.shape-bottom');
 const userName = document.querySelector('#user-name');
 const nameWrapper = document.querySelector('.shape__enter-name');
 const tel = document.querySelector('#user-phone');
 const telWrapper = document.querySelector('.shape__enter-phone');
-const userNameBottom = document.querySelector('#user-name-bottom');
-const nameBottomWrapper = document.querySelector('.shape-bottom__enter-name');
-const telBottom = document.querySelector('#user-phone-bottom');
-const telBottomWrapper = document.querySelector('.shape-bottom__enter-phone');
 
 function validateName(name) {
   const re = /^[a-z\d.]{5,}$/i;
@@ -116,39 +111,3 @@ shape.onsubmit = function() {
     telWrapper.classList.remove('shape__error');
   }
 };
-
-
-shapeBottom.onsubmit = function() {
-  const nameValBottom = userNameBottom.value,
-    phoneValBottom = telBottom.value;
-
-  if (nameValBottom === '') {
-    nameBottomWrapper.classList.add('shape-bottom__error');
-    return false;
-  } else {
-    nameBottomWrapper.classList.remove('shape-bottom__error');
-  }
-
-  if (!validateName(nameValBottom)) {
-    nameBottomWrapper.classList.add('shape-bottom__error');
-    return false;
-  } else {
-    nameBottomWrapper.classList.remove('shape-bottom__error');
-  }
-
-  if (phoneValBottom === '') {
-    telBottomWrapper.classList.add('shape-bottom__error');
-    return false;
-  } else {
-    telBottomWrapper.classList.remove('shape-bottom__error');
-  }
-
-  if (!validatePhone(phoneValBottom)) {
-    telBottomWrapper.classList.add('shape-bottom__error');
-    return false;
-  } else {
-    telBottomWrapper.classList.remove('shape-bottom__error');
-  }
-};
-
-
