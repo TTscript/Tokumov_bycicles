@@ -11,17 +11,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 77px;
+    padding-top: 128px;
   }
 
   @media (max-width: $max-mobile) {
-    padding-top: 72px;
+    padding-top: 178px;
   }
 }
 
 .about-us__logo {
   margin-bottom: 20px;
+}
 
+.about-us__logo--disappear {
   @media (max-width: $max-tablet) {
     display: none;
   }
@@ -53,6 +55,6 @@
   }
 
   @media (max-width: $max-mobile) {
-    max-width: 310px;
+    max-width: 300px;
   }
 }

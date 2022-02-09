@@ -1,6 +1,4 @@
 /*jshint esversion: 6 */
-// BURGER MENU
-
 const burgerClosed = document.querySelector('.burger-closed');
 const burgerOpen = document.querySelector('.burger-open');
 const burgerTop = document.querySelector('.burger-closed__top-line');
@@ -10,7 +8,15 @@ const pageHeader = document.querySelector('.page-header');
 const navigationItem = document.querySelectorAll('.page-header__navigation-item');
 const navItemArray = Array.from(navigationItem);
 const burgerMenuItems = Array.from(document.querySelectorAll('.burger-open__list-item-wrapper'));
+const logoTablet = document.querySelector('.page-header__tablet');
+const mainNavigation = document.querySelector('.main-navigation');
+const aboutUsBlock = document.querySelector('.about-us__logo');
 
+// BURGER MENU
+
+aboutUsBlock.classList.add('about-us__logo--disappear');
+mainNavigation.classList.add('main-navigation--disappear');
+logoTablet.classList.add('page-header__tablet-disappear');
 let isOpen = false;
 burgerClosed.classList.add('burger-closed--change-display');
 burgerOpen.classList.add('burger-open--appear');

@@ -12,7 +12,8 @@ const csso = require('gulp-csso');
 const minifyjs = require('gulp-minify');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
-
+const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
 
 
 function html() {
@@ -106,7 +107,16 @@ function devcss() {
     .pipe(dest('source/css/'));
 }
 
+function svgsprite() {
+  return src('source/img/*.svg')
+    .pipe(svgmin())
+    .pipe(svgstore())
+    .pipe(rename('svgsprite.svg'))
+    .pipe(dest('build/img'));
+}
+
+exports.sprite = svgsprite;
 exports.devcss = devcss;
 exports.clear = clear;
-exports.build = series(clear, copy,  optimizeImages, html, style, js, createWebp);
+exports.build = series(clear, copy, svgsprite, optimizeImages, html, style, js, createWebp);
 exports.default = series(clear, copy, html, style, js, createWebp, server);

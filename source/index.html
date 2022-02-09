@@ -28,7 +28,11 @@
       </nav>
       <div class="page-header__tablet">
         <div class="page-header__tablet-inner">
-          <a href="#"><img class="page-header__tablet-logo" src="img/logo.svg" width="68" height="20" alt="Логотип магазина Moon"></a>
+          <a href="#">
+            <svg>
+              <use xlink:href="img/svgsprite.svg#logo"></use>
+            </svg>
+          </a>
         </div>
         <div class="burger-closed">
           <div class="burger-closed__inner">
@@ -57,18 +61,6 @@
             <p class="burger-open__list-item"><a href="#how-find-us">Контакты</a></p>
           </div>
         </div>
-      </div>
-      <div class="page-header__navigation-item">
-        <p><a href="#facts">О нас</a></p>
-      </div>
-      <div class="page-header__navigation-item">
-        <p><a href="#types">Виды велосипедов</a></p>
-      </div>
-      <div class="page-header__navigation-item">
-        <p><a href="#video">Видео про велосипеды</a></p>
-      </div>
-      <div class="page-header__navigation-item">
-        <p><a href="#how-find-us">Контакты</a></p>
       </div>
     </header>
     <main class="page-main">
@@ -102,22 +94,6 @@
               </fieldset>
             </form>
           </div>
-        </div>
-        <div class="shape-block__inner-bottom">
-          <form class="shape-bottom" id="shape-bottom" action="#" method="post">
-            <fieldset class="shape-bottom__inner">
-              <legend class="shape-bottom__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
-              <div class="shape-bottom__enter-name">
-                <label class="visually-hidden" for="user-name-bottom">Email</label>
-                <input id="user-name-bottom" type="text" placeholder="Введите Ваше Имя">
-              </div>
-              <div class="shape-bottom__enter-phone">
-                <label class="visually-hidden" for="user-phone-bottom">Phone</label>
-                <input id="user-phone-bottom" type="tel" placeholder="Введите Ваш номер телефона">
-              </div>
-              <button type="submit">Подобрать велосипед мечты</button>
-            </fieldset>
-          </form>
         </div>
       </section>
       <section class="facts" id="facts">

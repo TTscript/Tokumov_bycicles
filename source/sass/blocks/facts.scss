@@ -101,4 +101,8 @@
       margin: 0;
     }
   }
+
+  @media (max-width: $max-mobile) {
+    max-width: 280px;
+  }
 }

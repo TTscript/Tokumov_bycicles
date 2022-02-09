@@ -3,7 +3,11 @@
   padding: 0;
 
   @media (max-width: $max-tablet) {
-    margin-bottom: 72px;
+    margin-bottom: 412px;
+  }
+
+  @media (max-width: $max-mobile) {
+    margin-bottom: 429px;
   }
 }
 
@@ -22,7 +26,8 @@
   }
 
   @media (max-width: $max-tablet) {
-    min-height: 340px;
+    min-height: unset;
+    max-height: 340px;
     background-image: url("../img/tablet/mainback.png");
     margin-bottom: 70px;
 
@@ -51,8 +56,14 @@
   min-width: 875px;
 
   @media (max-width: $max-tablet) {
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     min-width: unset;
+    row-gap: 28px;
+  }
+
+  @media (max-width: $max-mobile) {
+    row-gap: 68px;
   }
 }
 

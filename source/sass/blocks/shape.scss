@@ -1,6 +1,14 @@
 .shape {
   margin: 0;
   padding: 102px 0 0 0;
+
+  @media (max-width: $max-tablet) {
+    padding: 116px 0 0;
+  }
+
+  @media (max-width: $max-mobile) {
+    padding: 129px 0 0;
+  }
 }
 
 .shape__inner {
@@ -9,10 +17,6 @@
   border: none;
   margin: 0;
   padding: 0;
-
-  @media (max-width: $max-tablet) {
-    display: none;
-  }
 }
 
 .shape__inner legend {
@@ -22,6 +26,18 @@
   text-align: center;
   margin: 0 0 20px 0;
   padding: 0;
+
+  @media (max-width: $max-tablet) {
+    color: $form-title-color;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    max-width: 321px;
+    margin-bottom: 31px;
+  }
+
+  @media (max-width: $max-mobile) {
+    margin-bottom: 18px;
+  }
 }
 
 .shape__enter-name {
@@ -30,6 +46,10 @@
   border-radius: 6px;
   border: 1px solid $input-border-color;
   margin: 0 0 20px 0;
+
+  @media (max-width: $max-mobile) {
+    min-width: 100%;
+  }
 }
 
 .shape__enter-name input {
@@ -45,6 +65,10 @@
   &:focus {
     outline: 2px solid $turquoise-color;
   }
+
+  @media (max-width: $max-mobile) {
+    padding: 0 0 0 20px;
+  }
 }
 
 .shape__enter-phone {
@@ -53,6 +77,10 @@
   border-radius: 6px;
   border: 1px solid $input-border-color;
   margin: 0 0 20px 0;
+
+  @media (max-width: $max-mobile) {
+    min-width: 100%;
+  }
 }
 
 .shape__enter-phone input {
@@ -66,6 +94,10 @@
   &:hover,
   &:focus {
     outline: 2px solid $turquoise-color;
+  }
+
+  @media (max-width: $max-mobile) {
+    padding: 0 0 0 20px;
   }
 }
 
@@ -82,6 +114,10 @@
   cursor: pointer;
   margin: 0;
   padding: 10px;
+
+  @media (max-width: $max-tablet) {
+    min-width: 278px;
+  }
 
   &:hover {
     background-color: $button-hover;
