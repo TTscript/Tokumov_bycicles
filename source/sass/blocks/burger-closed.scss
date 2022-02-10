@@ -37,18 +37,18 @@
 }
 
 .burger-closed__top-line {
-  border: 1px solid $burger-menu-line-color;
+  border-bottom: 1px solid $burger-menu-line-color;
   width: 23px;
   padding: 0;
-  margin: 0 0 5px 0;
+  margin: 0 0 7px 0;
   transition: 1s;
 }
 
 .burger-closed__middle-line {
-  border: 1px solid $burger-menu-line-color;
+  border-bottom: 1px solid $burger-menu-line-color;
   width: 23px;
   padding: 0;
-  margin: 0 0 5px 0;
+  margin: 0 0 7px 0;
   transition: 1s;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .burger-closed__line {
-  border: 1px solid $burger-menu-line-color;
+  border-bottom: 1px solid $burger-menu-line-color;
   width: 23px;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .burger-closed__top-line--transform {
-  border: 1px solid $burger-open-line-color;
+  border-bottom: 1px solid $burger-open-line-color;
   width: 23px;
   transform: rotate(135deg);
   position: relative;
@@ -79,7 +79,7 @@
 }
 
 .burger-closed__bottom-line--transform {
-  border: 1px solid $burger-open-line-color;
+  border-bottom: 1px solid $burger-open-line-color;
   width: 23px;
   transform: rotate(-135deg);
   position: relative;
