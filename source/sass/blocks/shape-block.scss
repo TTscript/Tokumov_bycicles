@@ -20,9 +20,14 @@
   margin: 0;
   padding: 0 50px 20px 50px;
 
+  @media (min-width: $desktop) {
+    background-position: center;
+  }
+
   @media (min-resolution: 2dppx) {
     background: $shape-block-background-color url("../img/desktop/mainback@2x.png");
     background-size: cover;
+    background-position: center;
   }
 
   @media (max-width: $max-tablet) {

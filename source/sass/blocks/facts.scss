@@ -51,10 +51,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   counter-reset: list;
+  column-gap: 35px;
+  row-gap: 20px;
 
   @media (max-width: $max-tablet) {
     flex-wrap: wrap;
@@ -74,7 +76,7 @@
 .facts__list li {
   max-width: 263px;
   text-align: center;
-  margin: 0 35px 0 0;
+  margin: 0;
   padding: 0;
 
   &:last-child {

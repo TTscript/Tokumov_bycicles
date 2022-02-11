@@ -104,6 +104,7 @@
 
 .how-find-us__email {
   position: relative;
+  cursor: pointer;
   margin: 0;
 
   &::before {
@@ -128,21 +129,22 @@
   margin: 0;
   padding: 0;
 
-  &:hover {
-    color: $turquoise-color;
-  }
-
-  &:active {
-    opacity: 0.4;
-  }
-
   @media (max-width: $max-mobile) {
     margin: 0;
   }
 }
 
+.how-find-us__email:hover a {
+  color: $turquoise-color;
+}
+
+.how-find-us__email:active a {
+  opacity: 0.4;
+}
+
 .how-find-us__phone {
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -164,12 +166,12 @@
   color: $how-find-us-contacts;
   margin: 0;
   padding: 0;
+}
 
-  &:hover {
-    color: $turquoise-color;
-  }
+.how-find-us__phone:hover a {
+  color: $turquoise-color;
+}
 
-  &:active {
-    opacity: 0.4;
-  }
+.how-find-us__phone:active a {
+  opacity: 0.4;
 }
