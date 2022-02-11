@@ -49,7 +49,7 @@
   }
 
   @media (max-width: $max-mobile) {
-    row-gap: 37px;
+    row-gap: 0;
   }
 }
 
@@ -182,6 +182,15 @@
     width: 270px;
     height: 300px;
     background-position: center;
+  }
+}
+
+.types__img-cards {
+  @media (max-width: $max-mobile) {
+    margin-bottom: 37px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
