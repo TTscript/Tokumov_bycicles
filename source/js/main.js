@@ -13,6 +13,9 @@ const logoTablet = document.querySelector('.page-header__tablet');
 const mainNavigation = document.querySelector('.main-navigation');
 const pageMain = document.querySelector('.page-main');
 const aboutUsBlock = document.querySelector('.about-us__logo');
+const centerContainer = document.querySelector('.center-container');
+
+mainNavigation.classList.remove('main-navigation--fixed');
 
 window.addEventListener('DOMContentLoaded', correctHeaderHeight);
 let pageHeaderHeight = pageHeader.getBoundingClientRect().height;
@@ -50,14 +53,16 @@ burgerClosed.addEventListener('click', () => {
   burgerBottom.classList.toggle('burger-closed__bottom-line--transform');
   burgerMiddle.classList.toggle('visually-hidden');
   burgerClosed.classList.toggle('burger-closed--background-color');
+  centerContainer.classList.toggle('center-container--fixed');
 
   burgerMenuItems.forEach((item) => {
     item.addEventListener('click', () => {
-      burgerOpen.classList.toggle('burger-open__action');
-      burgerTop.classList.toggle('burger-closed__top-line--transform');
-      burgerBottom.classList.toggle('burger-closed__bottom-line--transform');
-      burgerMiddle.classList.toggle('visually-hidden');
-      burgerClosed.classList.toggle('burger-closed--background-color');
+      centerContainer.classList.remove('center-container--fixed');
+      burgerOpen.classList.add('burger-open__action');
+      burgerTop.classList.remove('burger-closed__top-line--transform');
+      burgerBottom.classList.remove('burger-closed__bottom-line--transform');
+      burgerMiddle.classList.remove('visually-hidden');
+      burgerClosed.classList.remove('burger-closed--background-color');
     });
   });
 });
@@ -72,7 +77,7 @@ const tel = document.querySelector('#user-phone');
 const telWrapper = document.querySelector('.shape__enter-phone');
 
 function validateName(name) {
-  const re = /^[a-z\d.]{3,}$/i;
+  const re = /^[a-z\d. -=а-я]{3,}$/i;
   return re.test(String(name));
 }
 

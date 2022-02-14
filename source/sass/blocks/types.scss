@@ -188,6 +188,7 @@
 .types__img-cards {
   @media (max-width: $max-mobile) {
     margin-bottom: 37px;
+
     &:last-child {
       margin-bottom: 0;
     }

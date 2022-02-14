@@ -1,8 +1,8 @@
 .main-navigation {
-  margin: 0;
-  padding: 0;
   border-bottom: 1px solid $light-font-color;
   min-width: 875px;
+  margin: 0;
+  padding: 0;
 
   &:hover {
     border-bottom: 1px solid $turquoise-color;
@@ -17,6 +17,17 @@
   @media (max-width: $max-tablet) {
     display: none;
     border-bottom: 0;
+  }
+}
+
+.main-navigation--fixed {
+  @media (min-width: $min-tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, $header-background-linera-gradient 0%, $header-background-color 27%, $header-background-color 70%, $header-background-linera-gradient 100%);
+    min-width: 100%;
+    padding: 6px 0;
   }
 }
 
@@ -46,7 +57,7 @@
   padding: 0;
   text-align: center;
 
-   @media (max-width: $max-tablet) {
+  @media (max-width: $max-tablet) {
     text-align: center;
     margin-right: 100px;
   }
@@ -97,10 +108,9 @@
   color: $turquoise-color;
 
   @media (max-width: $max-mobile) {
-      background-color: $burger-menu-list-item-hover;
-      color: unset;
+    background-color: $burger-menu-list-item-hover;
+    color: unset;
   }
-
 }
 
 .main-navigation__list-item:active a {
