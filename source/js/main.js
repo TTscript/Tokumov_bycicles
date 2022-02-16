@@ -77,7 +77,7 @@ const tel = document.querySelector('#user-phone');
 const telWrapper = document.querySelector('.shape__enter-phone');
 
 function validateName(name) {
-  const re = /^[a-z\d. -=а-я]{3,}$/i;
+  const re = /^[a-z\d. !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~А-яЁё]{3,}$/i;
   return re.test(String(name));
 }
 
